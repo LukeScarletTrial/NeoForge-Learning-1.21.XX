@@ -1,5 +1,9 @@
 {
-  "item.lukeslearningmod.myitem": "My Item",
-  "item.lukeslearningmod.raw_myitem": "Raw My Item",
-  "block.lukeslearningmod.bismuth_block": "Bismuth Block"
+  "item.lukeslearningmod.bismuth": "Bismuth",
+  "item.lukeslearningmod.raw_bismuth": "Raw Bismuth",
+  "block.lukeslearningmod.bismuth_block": "Bismuth Block",
+  "block.lukeslearningmod.bismuth_ore": "Bismuth Ore",
+
+  "creativetab.lukeslearningmod.bismuth_items": "Bismuth Items",
+  "creativetab.lukeslearningmod.bismuth_blocks": "Bismuth Blocks"
 }

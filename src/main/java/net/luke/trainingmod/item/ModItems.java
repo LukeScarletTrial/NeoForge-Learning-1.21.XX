@@ -9,9 +9,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TrainingMod.MODID);
 
-    public static final DeferredItem<Item> MYITEM = ITEMS.register("myitem",
+    public static final DeferredItem<Item> BISMUTH = ITEMS.register("bismuth",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> RAWMYITEM = ITEMS.register("raw_myitem",
+    public static final DeferredItem<Item> RAWBISMUTH = ITEMS.register("raw_bismuth",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

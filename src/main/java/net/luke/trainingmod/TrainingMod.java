@@ -1,6 +1,7 @@
 package net.luke.trainingmod;
 
 import net.luke.trainingmod.block.ModBlocks;
+import net.luke.trainingmod.item.ModCreativeModeTabs;
 import net.luke.trainingmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -50,6 +51,7 @@ public class TrainingMod {
         NeoForge.EVENT_BUS.register(this);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -65,11 +67,12 @@ public class TrainingMod {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.MYITEM);
-            event.accept(ModItems.RAWMYITEM);
+            event.accept(ModItems.BISMUTH);
+            event.accept(ModItems.RAWBISMUTH);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept(ModBlocks.BISMUTH_ORE);
         }
     }
 

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "lukeslearningmod:item/myitem"
+    "layer0": "lukeslearningmod:item/bismuth"
   }
 }
