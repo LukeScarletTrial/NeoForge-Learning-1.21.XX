@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
             .displayItems(((parameters, output) -> {
                 output.accept(ModBlocks.BISMUTH_BLOCK.get());
                 output.accept(ModBlocks.BISMUTH_ORE.get());
+                output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
             })).build());
 
 
