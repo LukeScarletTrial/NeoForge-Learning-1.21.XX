@@ -1,5 +1,6 @@
 package net.luke.trainingmod.block;
 
+import net.luke.trainingmod.block.custom.MagicBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.luke.trainingmod.TrainingMod;
@@ -33,6 +34,8 @@ public class ModBlocks {
                     UniformInt.of(2,6),
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)
             ));
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
