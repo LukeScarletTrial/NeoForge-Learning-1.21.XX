@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "lukeslearningmod:bismuth_block",
     "lukeslearningmod:bismuth_ore"
   ]
 }
