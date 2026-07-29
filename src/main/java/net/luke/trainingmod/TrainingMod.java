@@ -1,6 +1,7 @@
 package net.luke.trainingmod;
 
 import net.luke.trainingmod.block.ModBlocks;
+import net.luke.trainingmod.datagen.DataGenerators;
 import net.luke.trainingmod.item.ModCreativeModeTabs;
 import net.luke.trainingmod.item.ModItems;
 import org.slf4j.Logger;
@@ -55,6 +56,7 @@ public class TrainingMod {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(DataGenerators::gatherData);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
