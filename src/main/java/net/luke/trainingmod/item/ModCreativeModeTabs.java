@@ -71,6 +71,19 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.RADISH.get());
             })).build());
 
+    public static final Supplier<CreativeModeTab> BISMUTH_TOOLS_TAB = CREATIVE_MODE_TAB.register("bismuth_tools_tab", () -> CreativeModeTab.builder()
+            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "bismuth_blocks_tab"))
+            .icon(() -> new ItemStack(ModItems.BISMUTH_PICKAXE.get()))
+            .title(Component.translatable("creativetab.lukeslearningmod.bismuth_tools"))
+            .displayItems(((parameters, output) -> {
+                output.accept(ModItems.BISMUTH_SWORD.get());
+                output.accept(ModItems.BISMUTH_PICKAXE.get());
+                output.accept(ModItems.BISMUTH_HAMMER.get());
+                output.accept(ModItems.BISMUTH_AXE.get());
+                output.accept(ModItems.BISMUTH_SHOVEL.get());
+                output.accept(ModItems.BISMUTH_HOE.get());
+            })).build());
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

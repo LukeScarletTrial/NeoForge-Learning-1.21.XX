@@ -1,6 +1,7 @@
 package net.luke.trainingmod.item.custom;
 
 import net.luke.trainingmod.block.ModBlocks;
+import net.luke.trainingmod.component.ModDataComponent;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -50,6 +51,7 @@ public class ChiselItem extends Item {
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
                 level.playSound(null, context.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
 
+                context.getItemInHand().set(ModDataComponent.COORDINATES, context.getClickedPos());
             }
 
         }
@@ -65,6 +67,10 @@ public class ChiselItem extends Item {
 
         }else {
             tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.chisel"));
+        }
+
+        if(stack.get(ModDataComponent.COORDINATES) != null) {
+            tooltipComponents.add(Component.literal("Last §l§aBlock§r Changed at " + stack.get(ModDataComponent.COORDINATES)));
         }
 
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
