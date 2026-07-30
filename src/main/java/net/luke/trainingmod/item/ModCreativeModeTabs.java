@@ -42,9 +42,25 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creativetab.lukeslearningmod.bismuth_blocks"))
             .displayItems(((parameters, output) -> {
                 output.accept(ModBlocks.BISMUTH_BLOCK.get());
+
                 output.accept(ModBlocks.BISMUTH_ORE.get());
                 output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
-                output.accept(ModBlocks.MAGIC_BLOCK.get());
+
+                output.accept(ModBlocks.BISMUTH_BUTTON.get());
+                output.accept(ModBlocks.BISMUTH_TRAPDOOR.get());
+
+                output.accept(ModBlocks.BISMUTH_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.BISMUTH_DOOR.get());
+                output.accept(ModBlocks.BISMUTH_FENCE.get());
+
+                output.accept(ModBlocks.BISMUTH_FENCE_GATE.get());
+                output.accept(ModBlocks.BISMUTH_SLAB.get());
+
+                output.accept(ModBlocks.BISMUTH_STAIRS.get());
+                output.accept(ModBlocks.BISMUTH_WALL.get());
+
+                output.accept(ModBlocks.BISMUTH_LAMP.get());
+
             })).build());
 
     public static final Supplier<CreativeModeTab> BISMUTH_FOODS_TAB = CREATIVE_MODE_TAB.register("bismuth_foods_tab", () -> CreativeModeTab.builder()

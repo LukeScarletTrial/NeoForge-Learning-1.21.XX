@@ -5,11 +5,22 @@
   "item.lukeslearningmod.radish": "Radish",
   "item.lukeslearningmod.frostfire_ice": "Frostfire Ice",
   "item.lukeslearningmod.starlight_ashes": "Starlight Ashes",
+  "item.lukeslearningmod.bismuth_lamp": "Bismuth Lamp",
 
   "block.lukeslearningmod.bismuth_block": "Bismuth Block",
   "block.lukeslearningmod.bismuth_ore": "Bismuth Ore",
   "block.lukeslearningmod.bismuth_deepslate_ore": "Deeepslate Bismuth Ore",
   "block.lukeslearningmod.magic_block": "Magic Block",
+
+  "block.lukeslearningmod.bismuth_stairs": "Bismuth Stairs",
+  "block.lukeslearningmod.bismuth_button": "Bismuth Button",
+  "block.lukeslearningmod.bismuth_trapdoor": "Bismuth Trapdoor",
+  "block.lukeslearningmod.bismuth_wall": "Bismuth Wall",
+  "block.lukeslearningmod.bismuth_slab": "Bismuth Slab",
+  "block.lukeslearningmod.bismuth_pressure_plate": "Bismuth Pressure Plate",
+  "block.lukeslearningmod.bismuth_door": "Bismuth Door",
+  "block.lukeslearningmod.bismuth_fence": "Bismuth Fence",
+  "block.lukeslearningmod.bismuth_fence_gate": "Bismuth Fence Gate",
 
   "creativetab.lukeslearningmod.bismuth_items": "Bismuth Items",
   "creativetab.lukeslearningmod.bismuth_blocks": "Bismuth Blocks",
