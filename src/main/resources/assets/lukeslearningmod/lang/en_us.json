@@ -13,6 +13,11 @@
   "item.lukeslearningmod.bismuth_hoe": "Bismuth Hoe",
   "item.lukeslearningmod.bismuth_hammer": "Bismuth Hammer",
 
+  "item.lukeslearningmod.bismuth_helmet": "Bismuth Helmet",
+  "item.lukeslearningmod.bismuth_chestplate": "Bismuth Chestplate",
+  "item.lukeslearningmod.bismuth_leggings": "Bismuth Leggings",
+  "item.lukeslearningmod.bismuth_boots": "Bismuth Boots",
+
   "block.lukeslearningmod.bismuth_lamp": "Bismuth Lamp",
   "block.lukeslearningmod.bismuth_block": "Bismuth Block",
   "block.lukeslearningmod.bismuth_ore": "Bismuth Ore",
@@ -33,6 +38,7 @@
   "creativetab.lukeslearningmod.bismuth_blocks": "Bismuth Blocks",
   "creativetab.lukeslearningmod.bismuth_foods": "Bismuth Foods",
   "creativetab.lukeslearningmod.bismuth_tools": "Bismuth Tools",
+  "creativetab.lukeslearningmod.bismuth_armor": "Bismuth Armor",
 
   "tooltip.lukeslearningmod.magic_block.tooltip": "This Block is VERY §9Magical§r!",
   "tooltip.lukeslearningmod.chisel.shift_down": "This Tool allows you to chisel certain BLOCKS!",

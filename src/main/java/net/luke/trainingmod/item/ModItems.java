@@ -67,6 +67,33 @@ public class ModItems {
             () -> new HammerItem(ModToolTier.BISMUTH, BlockTags.MINEABLE_WITH_PICKAXE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTier.BISMUTH, 7f, -3.5f))));
 
+
+
+    public static final DeferredItem<ArmorItem> BISMUTH_HELMET = ITEMS.register("bismuth_helmet",
+            () -> new ArmorItem(
+                    ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
+                    ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(21))
+            ));
+    public static final DeferredItem<ArmorItem> BISMUTH_CHESTPLATE = ITEMS.register("bismuth_chestplate",
+            () -> new ArmorItem(
+                    ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(21))
+            ));
+    public static final DeferredItem<ArmorItem> BISMUTH_LEGGINGS = ITEMS.register("bismuth_leggings",
+            () -> new ArmorItem(
+                    ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(21))
+            ));
+    public static final DeferredItem<ArmorItem> BISMUTH_BOOTS = ITEMS.register("bismuth_boots",
+            () -> new ArmorItem(
+                    ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(21))
+            ));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -84,6 +84,17 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.BISMUTH_HOE.get());
             })).build());
 
+    public static final Supplier<CreativeModeTab> BISMUTH_ARMOR_TAB = CREATIVE_MODE_TAB.register("bismuth_armor_tab", () -> CreativeModeTab.builder()
+            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "bismuth_tools_tab"))
+            .icon(() -> new ItemStack(ModItems.BISMUTH_CHESTPLATE.get()))
+            .title(Component.translatable("creativetab.lukeslearningmod.bismuth_armor"))
+            .displayItems(((parameters, output) -> {
+                output.accept(ModItems.BISMUTH_HELMET.get());
+                output.accept(ModItems.BISMUTH_LEGGINGS.get());
+                output.accept(ModItems.BISMUTH_CHESTPLATE.get());
+                output.accept(ModItems.BISMUTH_BOOTS.get());
+            })).build());
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
