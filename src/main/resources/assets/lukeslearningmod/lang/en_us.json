@@ -51,10 +51,34 @@
   "tooltip.lukeslearningmod.magic_block.tooltip": "This Block is VERY §9Magical§r!",
   "tooltip.lukeslearningmod.chisel.shift_down": "This Tool allows you to chisel certain BLOCKS!",
   "tooltip.lukeslearningmod.chisel": "Hold §e[SHIFT]§r to learn MORE!",
-  "tooltip.lukeslearningmod.radish.tooltip": "Tastes really §2great§r!",
+  "tooltip.lukeslearningmod.bismuth.tooltip": "Extremely §2Rare§r!",
+  "tooltip.lukeslearningmod.rawbismuth.tooltip": "Cook it to get Pure §2Bismuth§r!",
+  "tooltip.lukeslearningmod.kaupen_bow.shift_down": "Blessed By §3Kaupenjoe§r! isn't he wonderful?",
+  "tooltip.lukeslearningmod.kaupen_bow": "Press §e[SHIFT]§r for more info!",
+  "tooltip.lukeslearningmod.bar_brawl_disc.tooltip": "registered under §4CC0 1.0 Universal§r §1(Public Domain)§r license.",
+  "tooltip.lukeslearningmod.frostfire_ice.tooltip": "will cook for an §3icy§r amount of time!",
+  "tooltip.lukeslearningmod.starlight_ashes.tooltip": "Straight from §4hell§r..",
+  "tooltip.lukeslearningmod.bismuth_helmet.tooltip": "with all the armor pieces, you may get a blessing.",
+  "tooltip.lukeslearningmod.bismuth_chestplate.tooltip": "with all the armor pieces, you may get a blessing.",
+  "tooltip.lukeslearningmod.bismuth_leggings.tooltip": "with all the armor pieces, you may get a blessing.",
+  "tooltip.lukeslearningmod.bismuth_boots.tooltip": "with all the armor pieces, you may get a blessing.",
+  "tooltip.lukeslearningmod.bismuth_horse_armor.tooltip": "horse armor, What do you expect?",
+  "tooltip.lukeslearningmod.bismuth_hammer.tooltip": "Better than a regular pickaxe, §4EXTREMELY§r heavy though!",
+  "tooltip.lukeslearningmod.radish.tooltip": "§2healthy and great§r, until §6YOU§r eat it..",
+
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.slimey_potion": "Slimey Tipped Arrow",
+
+  "painting.lukeslearningmod.world.title": "World",
+  "painting.lukeslearningmod.world.author": "NanoAttack",
+  "painting.lukeslearningmod.shrimp.title": "Shrimp",
+  "painting.lukeslearningmod.shrimp.author": "NanoAttack",
+  "painting.lukeslearningmod.saw_them.title": "Saw Them",
+  "painting.lukeslearningmod.saw_them.author": "Nano Attack",
 
   "trim_pattern.lukeslearningmod.kaupen": "Kaupen Armor Trim",
   "trim_material.lukeslearningmod.bismuth": "Bismuth Material",
-
   "effect.lukeslearningmod.slimey": "Slimey"
 }

@@ -18,7 +18,7 @@ public class ModEffects {
     public static final Holder<MobEffect> SLIMEY_EFFECT = MOB_EFFECTS.register("slimey",
             () -> new SlimeyEffect(MobEffectCategory.NEUTRAL, 0x36ebab)
                     .addAttributeModifier(Attributes.MOVEMENT_SPEED,
-                            ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "slimey"), -0.02f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+                            ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "slimey"), -0.25f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

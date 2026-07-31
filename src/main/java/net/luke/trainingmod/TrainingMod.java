@@ -6,6 +6,7 @@ import net.luke.trainingmod.datagen.DataGenerators;
 import net.luke.trainingmod.effect.ModEffects;
 import net.luke.trainingmod.item.ModCreativeModeTabs;
 import net.luke.trainingmod.item.ModItems;
+import net.luke.trainingmod.potion.ModPotion;
 import net.luke.trainingmod.sound.ModSounds;
 import org.slf4j.Logger;
 
@@ -45,6 +46,7 @@ public class TrainingMod {
         ModSounds.register(modEventBus);
 
         ModEffects.register(modEventBus);
+        ModPotion.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

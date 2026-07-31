@@ -3,11 +3,15 @@ package net.luke.trainingmod.item;
 import net.luke.trainingmod.TrainingMod;
 import net.luke.trainingmod.block.ModBlocks;
 import net.luke.trainingmod.item.custom.ChiselItem;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.CustomData;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -99,6 +103,7 @@ public class ModCreativeModeTabs {
                 // SONGS
 
                 output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+
             })).build());
 
     public static void register(IEventBus eventBus) {

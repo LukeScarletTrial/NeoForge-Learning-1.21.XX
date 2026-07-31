@@ -1,11 +1,13 @@
 package net.luke.trainingmod.item;
 
 import net.luke.trainingmod.TrainingMod;
+import net.luke.trainingmod.component.ModDataComponent;
 import net.luke.trainingmod.item.custom.ChiselItem;
 import net.luke.trainingmod.item.custom.FuelItem;
 import net.luke.trainingmod.item.custom.HammerItem;
 import net.luke.trainingmod.item.custom.ModArmorItem;
 import net.luke.trainingmod.sound.ModSounds;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -20,10 +22,24 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TrainingMod.MODID);
 
     public static final DeferredItem<Item> BISMUTH = ITEMS.register("bismuth",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties()){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.bismuth.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> RAWBISMUTH = ITEMS.register("raw_bismuth",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties()){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.rawbismuth.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));
@@ -39,10 +55,24 @@ public class ModItems {
             });
 
     public static final DeferredItem<Item> FROSTFIRE_ICE = ITEMS.register("frostfire_ice",
-            () -> new FuelItem(new Item.Properties(), 800));
+            () -> new FuelItem(new Item.Properties(), 800){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.frostfire_ice.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> STARLIGHT_ASHES = ITEMS.register("starlight_ashes",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties()){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.starlight_ashes.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
 
 
@@ -68,7 +98,14 @@ public class ModItems {
 
     public static final DeferredItem<HammerItem> BISMUTH_HAMMER = ITEMS.register("bismuth_hammer",
             () -> new HammerItem(ModToolTier.BISMUTH, BlockTags.MINEABLE_WITH_PICKAXE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTier.BISMUTH, 7f, -3.5f))));
+                    .attributes(PickaxeItem.createAttributes(ModToolTier.BISMUTH, 7f, -3.5f))){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.bismuth_hammer.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
 
 
@@ -77,39 +114,93 @@ public class ModItems {
                     ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(21))
-            ));
+            ){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.bismuth_helmet.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
     public static final DeferredItem<ArmorItem> BISMUTH_CHESTPLATE = ITEMS.register("bismuth_chestplate",
             () -> new ArmorItem(
                     ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(21))
-            ));
+            ){
+            @Override
+            public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.bismuth_chestplate.tooltip"));
+
+                super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+            }});
     public static final DeferredItem<ArmorItem> BISMUTH_LEGGINGS = ITEMS.register("bismuth_leggings",
             () -> new ArmorItem(
                     ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(21))
-            ));
+            ){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.bismuth_leggings.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
     public static final DeferredItem<ArmorItem> BISMUTH_BOOTS = ITEMS.register("bismuth_boots",
             () -> new ArmorItem(
                     ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(21))
-            ));
+            ){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.bismuth_boots.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> BISMUTH_HORSE_ARMOR = ITEMS.register("bismuth_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterial.BISMUTH_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
-                    false, new Item.Properties().stacksTo(1)));
+                    false, new Item.Properties().stacksTo(1)){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.bismuth_horse_armor.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.register("kaupen_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "kaupen")));
 
     public static final DeferredItem<Item> KAUPEN_BOW = ITEMS.register("kaupen_bow",
             () -> new BowItem(
-                    new Item.Properties().durability(500)));
+                    new Item.Properties().durability(500)){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    if(Screen.hasShiftDown()){
+
+                        tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.kaupen_bow.shift_down"));
+
+                    }else {
+                        tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.kaupen_bow"));
+                    }
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
-            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).stacksTo(1)));
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).stacksTo(1)){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.lukeslearningmod.bar_brawl_disc.tooltip"));
+
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
