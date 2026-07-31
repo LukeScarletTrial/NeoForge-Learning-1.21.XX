@@ -12,11 +12,16 @@
   "item.lukeslearningmod.bismuth_shovel": "Bismuth Shovel",
   "item.lukeslearningmod.bismuth_hoe": "Bismuth Hoe",
   "item.lukeslearningmod.bismuth_hammer": "Bismuth Hammer",
+  "item.lukeslearningmod.kaupen_bow": "Kaupen Bow",
+
+  "item.lukeslearningmod.kaupen_armor_trim_smithing_template": "Kaupen Trim Template",
 
   "item.lukeslearningmod.bismuth_helmet": "Bismuth Helmet",
   "item.lukeslearningmod.bismuth_chestplate": "Bismuth Chestplate",
   "item.lukeslearningmod.bismuth_leggings": "Bismuth Leggings",
   "item.lukeslearningmod.bismuth_boots": "Bismuth Boots",
+
+  "item.lukeslearningmod.bismuth_horse_armor": "Bismuth Horse Armor",
 
   "block.lukeslearningmod.bismuth_lamp": "Bismuth Lamp",
   "block.lukeslearningmod.bismuth_block": "Bismuth Block",
@@ -43,5 +48,8 @@
   "tooltip.lukeslearningmod.magic_block.tooltip": "This Block is VERY §9Magical§r!",
   "tooltip.lukeslearningmod.chisel.shift_down": "This Tool allows you to chisel certain BLOCKS!",
   "tooltip.lukeslearningmod.chisel": "Hold §e[SHIFT]§r to learn MORE!",
-  "tooltip.lukeslearningmod.radish.tooltip": "Tastes really §2great§r!"
+  "tooltip.lukeslearningmod.radish.tooltip": "Tastes really §2great§r!",
+
+  "trim_pattern.lukeslearningmod.kaupen": "Kaupen Armor Trim",
+  "trim_material_lukeslearningmod.bismuth": "Bismuth Material"
 }

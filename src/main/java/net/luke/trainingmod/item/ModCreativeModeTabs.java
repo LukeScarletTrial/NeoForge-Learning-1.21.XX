@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TrainingMod.MODID);
 
     public static final Supplier<CreativeModeTab> BISMUTH_ITEMS_TAB = CREATIVE_MODE_TAB.register("bismuth_items_tab", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModItems.RAWBISMUTH.get()))
+            .icon(() -> new ItemStack(ModItems.BISMUTH.get()))
             .title(Component.translatable("creativetab.lukeslearningmod.bismuth_items"))
             .displayItems(((parameters, output) -> {
                 // Regular stuff..
@@ -34,6 +34,29 @@ public class ModCreativeModeTabs {
 
                 output.accept(ModItems.STARLIGHT_ASHES.get());
                 output.accept(ModItems.FROSTFIRE_ICE.get());
+
+                // TOOLS
+
+                output.accept(ModItems.BISMUTH_SWORD.get());
+                output.accept(ModItems.BISMUTH_PICKAXE.get());
+                output.accept(ModItems.BISMUTH_HAMMER.get());
+                output.accept(ModItems.BISMUTH_AXE.get());
+                output.accept(ModItems.BISMUTH_SHOVEL.get());
+                output.accept(ModItems.BISMUTH_HOE.get());
+                output.accept(ModItems.KAUPEN_BOW.get());
+
+                // ARMOR
+                output.accept(ModItems.BISMUTH_HELMET.get());
+                output.accept(ModItems.BISMUTH_LEGGINGS.get());
+                output.accept(ModItems.BISMUTH_CHESTPLATE.get());
+                output.accept(ModItems.BISMUTH_BOOTS.get());
+
+                // HORSE ARMOR
+                output.accept(ModItems.BISMUTH_HORSE_ARMOR.get());
+
+                // SMITHING TEMPLATES
+                output.accept(ModItems.KAUPEN_SMITHING_TEMPLATE.get());
+
             })).build());
 
     public static final Supplier<CreativeModeTab> BISMUTH_BLOCKS_TAB = CREATIVE_MODE_TAB.register("bismuth_blocks_tab", () -> CreativeModeTab.builder()
@@ -70,31 +93,6 @@ public class ModCreativeModeTabs {
             .displayItems(((parameters, output) -> {
                 output.accept(ModItems.RADISH.get());
             })).build());
-
-    public static final Supplier<CreativeModeTab> BISMUTH_TOOLS_TAB = CREATIVE_MODE_TAB.register("bismuth_tools_tab", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "bismuth_blocks_tab"))
-            .icon(() -> new ItemStack(ModItems.BISMUTH_PICKAXE.get()))
-            .title(Component.translatable("creativetab.lukeslearningmod.bismuth_tools"))
-            .displayItems(((parameters, output) -> {
-                output.accept(ModItems.BISMUTH_SWORD.get());
-                output.accept(ModItems.BISMUTH_PICKAXE.get());
-                output.accept(ModItems.BISMUTH_HAMMER.get());
-                output.accept(ModItems.BISMUTH_AXE.get());
-                output.accept(ModItems.BISMUTH_SHOVEL.get());
-                output.accept(ModItems.BISMUTH_HOE.get());
-            })).build());
-
-    public static final Supplier<CreativeModeTab> BISMUTH_ARMOR_TAB = CREATIVE_MODE_TAB.register("bismuth_armor_tab", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "bismuth_tools_tab"))
-            .icon(() -> new ItemStack(ModItems.BISMUTH_CHESTPLATE.get()))
-            .title(Component.translatable("creativetab.lukeslearningmod.bismuth_armor"))
-            .displayItems(((parameters, output) -> {
-                output.accept(ModItems.BISMUTH_HELMET.get());
-                output.accept(ModItems.BISMUTH_LEGGINGS.get());
-                output.accept(ModItems.BISMUTH_CHESTPLATE.get());
-                output.accept(ModItems.BISMUTH_BOOTS.get());
-            })).build());
-
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

@@ -1,0 +1,6 @@
+{
+    "parent": "lukeslearningmod:item/kaupen_bow",
+    "textures": {
+        "layer0": "lukeslearningmod:item/kaupen_bow_pulling_2"
+    }
+}

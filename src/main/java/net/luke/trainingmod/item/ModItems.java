@@ -4,7 +4,9 @@ import net.luke.trainingmod.TrainingMod;
 import net.luke.trainingmod.item.custom.ChiselItem;
 import net.luke.trainingmod.item.custom.FuelItem;
 import net.luke.trainingmod.item.custom.HammerItem;
+import net.luke.trainingmod.item.custom.ModArmorItem;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
@@ -70,7 +72,7 @@ public class ModItems {
 
 
     public static final DeferredItem<ArmorItem> BISMUTH_HELMET = ITEMS.register("bismuth_helmet",
-            () -> new ArmorItem(
+            () -> new ModArmorItem(
                     ModArmorMaterial.BISMUTH_ARMOR_MATERIAL,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(21))
@@ -93,6 +95,18 @@ public class ModItems {
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(21))
             ));
+
+    public static final DeferredItem<Item> BISMUTH_HORSE_ARMOR = ITEMS.register("bismuth_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterial.BISMUTH_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.register("kaupen_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "kaupen")));
+
+    public static final DeferredItem<Item> KAUPEN_BOW = ITEMS.register("kaupen_bow",
+            () -> new BowItem(
+                    new Item.Properties().durability(500)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
