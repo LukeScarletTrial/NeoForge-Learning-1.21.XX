@@ -17,7 +17,7 @@ public class ModItemProperties {
     }
 
     private static void makeCustomBow(Item item) {
-       ItemProperties.register(Items.BOW, ResourceLocation.withDefaultNamespace("pull"), (p_344163_, p_344164_, p_344165_, p_344166_) -> {
+       ItemProperties.register(ModItems.KAUPEN_BOW.get(), ResourceLocation.withDefaultNamespace("pull"), (p_344163_, p_344164_, p_344165_, p_344166_) -> {
             if (p_344165_ == null) {
                 return 0.0F;
             } else {
