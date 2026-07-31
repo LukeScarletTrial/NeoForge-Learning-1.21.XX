@@ -3,11 +3,20 @@ package net.luke.trainingmod.event;
 import net.luke.trainingmod.TrainingMod;
 import net.luke.trainingmod.item.custom.HammerItem;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 import java.util.HashSet;
@@ -41,4 +50,25 @@ public class ModEvents {
         }
     }
 
+    @SubscribeEvent
+    public static void livingDamage(LivingDamageEvent.Pre event) {
+        if(event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) {
+            if(player.getMainHandItem().getItem() == Items.END_ROD) {
+                player.sendSystemMessage(Component.literal(player.getName().getString() + " just hit a sheep with an END ROD??? YOU SICK FREAK!"));
+                player.addEffect(new MobEffectInstance(MobEffects.RAID_OMEN, 2000, 1));
+                sheep.addEffect(new MobEffectInstance(MobEffects.POISON, 600, 6));
+                player.getMainHandItem().shrink(1);
+            }
+        }
+        if (event.getEntity() instanceof Cat cat && event.getSource().getDirectEntity() instanceof Player player) {
+            Item mainItem = player.getMainHandItem().getItem();
+            if (mainItem == Items.NETHERITE_SWORD || mainItem == Items.DIAMOND_SWORD) {
+                player.sendSystemMessage(Component.literal(player.getName().getString() + "abused their power over a DAMN CAT! Why on earth would you hit a cat with a SWORD, you sick psycho?!"));
+                player.addEffect(new MobEffectInstance(MobEffects.POISON, 1000000000, 255));
+                cat.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 500, 255));
+                player.getMainHandItem().shrink(1);player.sendSystemMessage(Component.literal(player.getName().getString() + " Heh, you seem to have misplaced your sword, moron"));
+
+            }
+        }
+    }
 }

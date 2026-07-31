@@ -23,6 +23,9 @@
 
   "item.lukeslearningmod.bismuth_horse_armor": "Bismuth Horse Armor",
 
+  "item.lukeslearningmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+  "item.lukeslearningmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+
   "block.lukeslearningmod.bismuth_lamp": "Bismuth Lamp",
   "block.lukeslearningmod.bismuth_block": "Bismuth Block",
   "block.lukeslearningmod.bismuth_ore": "Bismuth Ore",
@@ -41,7 +44,7 @@
 
   "creativetab.lukeslearningmod.bismuth_items": "Bismuth Items",
   "creativetab.lukeslearningmod.bismuth_blocks": "Bismuth Blocks",
-  "creativetab.lukeslearningmod.bismuth_foods": "Bismuth Foods",
+  "creativetab.lukeslearningmod.bismuth_random": "Non-Categorized Stuff",
   "creativetab.lukeslearningmod.bismuth_tools": "Bismuth Tools",
   "creativetab.lukeslearningmod.bismuth_armor": "Bismuth Armor",
 
@@ -51,5 +54,7 @@
   "tooltip.lukeslearningmod.radish.tooltip": "Tastes really §2great§r!",
 
   "trim_pattern.lukeslearningmod.kaupen": "Kaupen Armor Trim",
-  "trim_material_lukeslearningmod.bismuth": "Bismuth Material"
+  "trim_material.lukeslearningmod.bismuth": "Bismuth Material",
+
+  "effect.lukeslearningmod.slimey": "Slimey"
 }

@@ -3,8 +3,10 @@ package net.luke.trainingmod;
 import net.luke.trainingmod.block.ModBlocks;
 import net.luke.trainingmod.component.ModDataComponent;
 import net.luke.trainingmod.datagen.DataGenerators;
+import net.luke.trainingmod.effect.ModEffects;
 import net.luke.trainingmod.item.ModCreativeModeTabs;
 import net.luke.trainingmod.item.ModItems;
+import net.luke.trainingmod.sound.ModSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -40,6 +42,9 @@ public class TrainingMod {
         ModBlocks.register(modEventBus);
         ModDataComponent.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        ModSounds.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

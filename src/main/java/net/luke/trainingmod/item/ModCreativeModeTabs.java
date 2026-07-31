@@ -26,15 +26,6 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.BISMUTH.get());
                 output.accept(ModItems.RAWBISMUTH.get());
 
-                // Advvanced Items
-
-                output.accept(ModItems.CHISEL.get());
-
-                // Fuel Things
-
-                output.accept(ModItems.STARLIGHT_ASHES.get());
-                output.accept(ModItems.FROSTFIRE_ICE.get());
-
                 // TOOLS
 
                 output.accept(ModItems.BISMUTH_SWORD.get());
@@ -54,9 +45,6 @@ public class ModCreativeModeTabs {
                 // HORSE ARMOR
                 output.accept(ModItems.BISMUTH_HORSE_ARMOR.get());
 
-                // SMITHING TEMPLATES
-                output.accept(ModItems.KAUPEN_SMITHING_TEMPLATE.get());
-
             })).build());
 
     public static final Supplier<CreativeModeTab> BISMUTH_BLOCKS_TAB = CREATIVE_MODE_TAB.register("bismuth_blocks_tab", () -> CreativeModeTab.builder()
@@ -65,6 +53,7 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creativetab.lukeslearningmod.bismuth_blocks"))
             .displayItems(((parameters, output) -> {
                 output.accept(ModBlocks.BISMUTH_BLOCK.get());
+
 
                 output.accept(ModBlocks.BISMUTH_ORE.get());
                 output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
@@ -82,16 +71,34 @@ public class ModCreativeModeTabs {
                 output.accept(ModBlocks.BISMUTH_STAIRS.get());
                 output.accept(ModBlocks.BISMUTH_WALL.get());
 
-                output.accept(ModBlocks.BISMUTH_LAMP.get());
-
             })).build());
 
-    public static final Supplier<CreativeModeTab> BISMUTH_FOODS_TAB = CREATIVE_MODE_TAB.register("bismuth_foods_tab", () -> CreativeModeTab.builder()
+    public static final Supplier<CreativeModeTab> BISMUTH_RANDOM_TAB = CREATIVE_MODE_TAB.register("bismuth_random_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TrainingMod.MODID, "bismuth_blocks_tab"))
-            .icon(() -> new ItemStack(ModItems.RADISH.get()))
-            .title(Component.translatable("creativetab.lukeslearningmod.bismuth_foods"))
+            .icon(() -> new ItemStack(ModBlocks.MAGIC_BLOCK.get()))
+            .title(Component.translatable("creativetab.lukeslearningmod.bismuth_random"))
             .displayItems(((parameters, output) -> {
+                output.accept(ModBlocks.BISMUTH_LAMP.get());
+
+                // SMITHING TEMPLATES
+                output.accept(ModItems.KAUPEN_SMITHING_TEMPLATE.get());
+
+                // MAGICAL/MAGIC BLOCK
+
+                output.accept(ModBlocks.MAGIC_BLOCK.get());
+
+                // Fuel Things
+
+                output.accept(ModItems.STARLIGHT_ASHES.get());
+                output.accept(ModItems.FROSTFIRE_ICE.get());
+
+                output.accept(ModItems.CHISEL.get());
+
                 output.accept(ModItems.RADISH.get());
+
+                // SONGS
+
+                output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
             })).build());
 
     public static void register(IEventBus eventBus) {

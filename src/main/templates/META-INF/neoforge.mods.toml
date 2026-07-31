@@ -29,6 +29,9 @@ version="${mod_version}" #mandatory
 # A display name for the mod
 displayName="${mod_name}" #mandatory
 
+# A file name (in the rooot of the mod JAR) containing a Logo for display
+logoFile="logo.png"
+
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 
@@ -87,7 +90,6 @@ Luke's Training Mod
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
-
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.

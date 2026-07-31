@@ -5,6 +5,7 @@ import net.luke.trainingmod.item.custom.ChiselItem;
 import net.luke.trainingmod.item.custom.FuelItem;
 import net.luke.trainingmod.item.custom.HammerItem;
 import net.luke.trainingmod.item.custom.ModArmorItem;
+import net.luke.trainingmod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -107,6 +108,8 @@ public class ModItems {
             () -> new BowItem(
                     new Item.Properties().durability(500)));
 
+    public static final DeferredItem<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
