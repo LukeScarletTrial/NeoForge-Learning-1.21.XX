@@ -1,6 +1,7 @@
 package net.luke.trainingmod.item;
 
 import net.luke.trainingmod.TrainingMod;
+import net.luke.trainingmod.block.ModBlocks;
 import net.luke.trainingmod.component.ModDataComponent;
 import net.luke.trainingmod.item.custom.ChiselItem;
 import net.luke.trainingmod.item.custom.FuelItem;
@@ -12,6 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.SeededContainerLoot;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -202,6 +204,10 @@ public class ModItems {
                 }
             });
 
+    public static final DeferredItem<Item> RADISH_SEEDS = ITEMS.register("radish_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.RADISH_CROP.get(), new Item.Properties()));
+    public static final DeferredItem<Item> GOJI_BERRIES = ITEMS.register("goji_berries",
+            () -> new ItemNameBlockItem(ModBlocks.GOJI_BERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.GOJI_BERRY)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

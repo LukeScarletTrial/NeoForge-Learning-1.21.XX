@@ -1,9 +1,12 @@
 package net.luke.trainingmod.block;
 
 import net.luke.trainingmod.block.custom.BismuthLampBlock;
+import net.luke.trainingmod.block.custom.GojiBerryBushBlock;
 import net.luke.trainingmod.block.custom.MagicBlock;
+import net.luke.trainingmod.block.custom.RadishCropBlock;
 import net.luke.trainingmod.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.level.block.*;
 import net.luke.trainingmod.TrainingMod;
 import net.luke.trainingmod.item.ModItems;
@@ -36,11 +39,19 @@ public class ModBlocks {
                     UniformInt.of(2,6),
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)
             ));
+
+    public static final DeferredBlock<Block> BISMUTH_END_ORE = registerBlock("bismuth_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(5, 9),
+                    BlockBehaviour.Properties.of().strength(7f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BISMUTH_NETHER_ORE = registerBlock("bismuth_nether_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1, 5),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
     public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).noLootTable().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final DeferredBlock<StairBlock> BISMUTH_STAIRS = registerBlock("bismuth_stairs",
-            () -> new StairBlock(ModBlocks.BISMUTH_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(2f)));
+            () -> new StairBlock(BISMUTH_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(2f)));
     public static final DeferredBlock<PressurePlateBlock> BISMUTH_PRESSURE_PLATE = registerBlock("bismuth_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(2f)));
 
@@ -63,6 +74,12 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BISMUTH_LAMP = registerBlock("bismuth_lamp",
             () -> new BismuthLampBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BismuthLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> RADISH_CROP = BLOCKS.register("radish_crop",
+            () -> new RadishCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEETROOTS)));
+
+    public static final DeferredBlock<Block> GOJI_BERRY_BUSH = BLOCKS.register("goji_berry_bush",
+            () -> new GojiBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

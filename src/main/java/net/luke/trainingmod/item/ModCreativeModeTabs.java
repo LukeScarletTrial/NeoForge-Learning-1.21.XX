@@ -96,9 +96,14 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.STARLIGHT_ASHES.get());
                 output.accept(ModItems.FROSTFIRE_ICE.get());
 
+                // ADVANCED ITEM
+
                 output.accept(ModItems.CHISEL.get());
 
+                // FOOD & CROPS
                 output.accept(ModItems.RADISH.get());
+                output.accept(ModItems.RADISH_SEEDS.get());
+                output.accept(ModItems.GOJI_BERRIES.get());
 
                 // SONGS
 

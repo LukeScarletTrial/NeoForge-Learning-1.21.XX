@@ -4,6 +4,7 @@ import net.luke.trainingmod.block.ModBlocks;
 import net.luke.trainingmod.component.ModDataComponent;
 import net.luke.trainingmod.datagen.DataGenerators;
 import net.luke.trainingmod.effect.ModEffects;
+import net.luke.trainingmod.enchantement.ModEnchantementEffects;
 import net.luke.trainingmod.item.ModCreativeModeTabs;
 import net.luke.trainingmod.item.ModItems;
 import net.luke.trainingmod.potion.ModPotion;
@@ -47,6 +48,8 @@ public class TrainingMod {
 
         ModEffects.register(modEventBus);
         ModPotion.register(modEventBus);
+
+        ModEnchantementEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

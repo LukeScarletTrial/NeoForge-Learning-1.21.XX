@@ -14,6 +14,9 @@
   "item.lukeslearningmod.bismuth_hammer": "Bismuth Hammer",
   "item.lukeslearningmod.kaupen_bow": "Kaupen Bow",
 
+  "item.lukeslearningmod.radish_seeds": "Radish Seeds",
+  "item.lukeslearningmod.goji_berries": "Goji Berries",
+
   "item.lukeslearningmod.kaupen_armor_trim_smithing_template": "Kaupen Trim Template",
 
   "item.lukeslearningmod.bismuth_helmet": "Bismuth Helmet",
@@ -29,8 +32,13 @@
   "block.lukeslearningmod.bismuth_lamp": "Bismuth Lamp",
   "block.lukeslearningmod.bismuth_block": "Bismuth Block",
   "block.lukeslearningmod.bismuth_ore": "Bismuth Ore",
-  "block.lukeslearningmod.bismuth_deepslate_ore": "Deeepslate Bismuth Ore",
+  "block.lukeslearningmod.bismuth_deepslate_ore": "Deepslate Bismuth Ore",
+  "block.lukeslearningmod.bismuth_nether_ore": "Nether Bismuth Ore",
+  "block.lukeslearningmod.bismuth_end_ore": "End Bismuth Ore",
   "block.lukeslearningmod.magic_block": "Magic Block",
+
+  "block.lukeslearningmod.radish_crop": "Radish Crop",
+  "block.lukeslearningmod.goji_berry_bush": "Goji Berry Bush",
 
   "block.lukeslearningmod.bismuth_stairs": "Bismuth Stairs",
   "block.lukeslearningmod.bismuth_button": "Bismuth Button",
@@ -77,6 +85,8 @@
   "painting.lukeslearningmod.shrimp.author": "NanoAttack",
   "painting.lukeslearningmod.saw_them.title": "Saw Them",
   "painting.lukeslearningmod.saw_them.author": "Nano Attack",
+
+  "enchantment.lukeslearningmod.lightning_striker": "Lightning Striker",
 
   "trim_pattern.lukeslearningmod.kaupen": "Kaupen Armor Trim",
   "trim_material.lukeslearningmod.bismuth": "Bismuth Material",
