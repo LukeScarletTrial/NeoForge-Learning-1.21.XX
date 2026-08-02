@@ -27,7 +27,7 @@ import java.util.Set;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
-    protected ModBlockLootTableProvider(HolderLookup.Provider registries) {
+    public ModBlockLootTableProvider(HolderLookup.Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }
 
@@ -76,6 +76,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )));
+
+        this.dropSelf(ModBlocks.BLOODWOOD_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_BLOODWOOD_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_BLOODWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.BLOODWOOD_PLANKS.get());
+        this.dropSelf(ModBlocks.BLOODWOOD_SAPLING.get());
+        this.dropSelf(ModBlocks.BLOODWOOD_WOOD.get());
+
+        this.add(ModBlocks.BLOODWOOD_LEAVES.get(), block ->
+                createLeavesDrops(block,ModBlocks.BLOODWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
     }
 
 

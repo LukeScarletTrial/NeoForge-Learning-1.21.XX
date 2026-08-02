@@ -60,6 +60,8 @@ public class ModCreativeModeTabs {
 
 
                 output.accept(ModBlocks.BISMUTH_ORE.get());
+                output.accept(ModBlocks.BISMUTH_NETHER_ORE.get());
+                output.accept(ModBlocks.BISMUTH_END_ORE.get());
                 output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
 
                 output.accept(ModBlocks.BISMUTH_BUTTON.get());
@@ -74,6 +76,17 @@ public class ModCreativeModeTabs {
 
                 output.accept(ModBlocks.BISMUTH_STAIRS.get());
                 output.accept(ModBlocks.BISMUTH_WALL.get());
+
+                output.accept(ModBlocks.BLOODWOOD_LOG.get());
+                output.accept(ModBlocks.BLOODWOOD_WOOD.get());
+                output.accept(ModBlocks.STRIPPED_BLOODWOOD_LOG.get());
+                output.accept(ModBlocks.STRIPPED_BLOODWOOD_WOOD.get());
+
+                output.accept(ModBlocks.BLOODWOOD_PLANKS.get());
+                output.accept(ModBlocks.BLOODWOOD_SAPLING.get());
+
+                output.accept(ModBlocks.BLOODWOOD_LEAVES.get());
+
 
             })).build());
 

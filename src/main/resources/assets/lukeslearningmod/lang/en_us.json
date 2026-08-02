@@ -26,6 +26,8 @@
 
   "item.lukeslearningmod.bismuth_horse_armor": "Bismuth Horse Armor",
 
+  "item.lukeslearningmod.bloodwood_sapling": "Bloodwood Sapling",
+
   "item.lukeslearningmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
   "item.lukeslearningmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
 
@@ -49,6 +51,13 @@
   "block.lukeslearningmod.bismuth_door": "Bismuth Door",
   "block.lukeslearningmod.bismuth_fence": "Bismuth Fence",
   "block.lukeslearningmod.bismuth_fence_gate": "Bismuth Fence Gate",
+
+  "block.lukeslearningmod.bloodwood_log": "Bloodwood Log",
+  "block.lukeslearningmod.bloodwood_planks": "Bloodwood Planks",
+  "block.lukeslearningmod.bloodwood_wood": "Bloodwood Wood",
+  "block.lukeslearningmod.stripped_bloodwood_log": "Stripped Bloodwood Log",
+  "block.lukeslearningmod.stripped_bloodwood_wood": "Stripped Bloodwood Wood",
+  "block.lukeslearningmod.bloodwood_leaves": "Bloodwood Leaves",
 
   "creativetab.lukeslearningmod.bismuth_items": "Bismuth Items",
   "creativetab.lukeslearningmod.bismuth_blocks": "Bismuth Blocks",
