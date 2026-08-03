@@ -61,7 +61,7 @@ public class ModConfiguredFeatures {
 
                 new TwoLayersFeatureSize(1,0,2)).dirt(BlockStateProvider.simple(Blocks.NETHERRACK)).build());
 
-        register(context, GOJI_BERRY_BUSH_KEY, Feature.RANDOM_PATCH, Feature);
+        //register(context, GOJI_BERRY_BUSH_KEY, Feature.RANDOM_PATCH, Feature);
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
